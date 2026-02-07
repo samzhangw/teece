@@ -3,14 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>115年統測倒數計時器 | 四技二專考試日期與剩餘天數</title>
+    <meta name="description" content="專為115學年度四技二專統測考生設計的倒數計時器。提供精準的考試倒數、激勵語錄與美觀介面，陪伴你衝刺每一天。立即查看統測剩幾天！" />
+    <meta name="keywords" content="115統測, 統測倒數, 115年統測日期, 四技二專, 統測計時器, 升學考試, 倒數天數, 統測日期" />
+    <meta name="author" content="統測倒數小幫手" />
+    <meta name="robots" content="index, follow" />
+    
+    <link rel="canonical" href="https://你的網域.com/" />
+
     <meta name="google-site-verification" content="eGI3oOhrVVbqjfKd573-m1X00npd47HbZCyJrsKLzEY" />
-    <title>115年統測倒數</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="115年統測倒數 | 距離考試還有幾天？" />
+    <meta property="og:description" content="把握時間，金榜題名！精美的115年統測倒數計時器，陪你一起努力。" />
+    <meta property="og:url" content="https://你的網域.com/" />
+    <meta property="og:image" content="https://teece.vercel.app/og-image.jpg" /> 
+    <meta property="og:locale" content="zh_TW" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="115年統測倒數計時器" />
+    <meta name="twitter:description" content="距離115年四技二專統測還有多久？立即查看！" />
+    <meta name="twitter:image" content="https://你的網域.com/og-image.jpg" />
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "115年統測倒數計時器",
+      "url": "https://teece.vercel.app/",
+      "description": "提供115學年度四技二專統一入學測驗的即時倒數功能。",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "TWD"
+      }
+    }
+    </script>
+
     <style>
       body {
         font-family: 'Noto Sans TC', sans-serif;
@@ -66,7 +106,7 @@
       
       .glass-card:hover {
         background: rgba(255, 255, 255, 0.85);
-        transform: translateY(-4px) scale(1.01);
+        transform: translateY(-4px) scale(1.02);
         border-color: rgba(99, 102, 241, 0.3);
         box-shadow: 
           0 20px 25px -5px rgba(99, 102, 241, 0.1), 
@@ -74,13 +114,12 @@
           0 0 0 1px rgba(99, 102, 241, 0.1);
       }
 
-      /* Utility for monospaced numbers */
       .font-mono-nums {
         font-family: 'JetBrains Mono', monospace;
         font-variant-numeric: tabular-nums;
       }
 
-      /* Shimmer Effect for upcoming events */
+      /* Shimmer Effect */
       .shimmer {
         background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
         background-size: 200% 100%;
@@ -91,34 +130,18 @@
         0% { background-position: -200% 0; }
         100% { background-position: 200% 0; }
       }
-      
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 6px;
-      }
-      ::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: rgba(203, 213, 225, 0.6);
-        border-radius: 99px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: rgba(148, 163, 184, 0.8);
-      }
     </style>
-<link rel="stylesheet" href="/index.css">
-</head>
+  </head>
   <body>
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9X7EC127P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-H9X7EC127P');
-</script>
-</body>
+    <script type="module" src="/src/index.tsx"></script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9X7EC127P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-H9X7EC127P');
+    </script>
+  </body>
 </html>
