@@ -1,0 +1,7 @@
+{
+  "name": "116 統測倒數神器",
+  "description": "專為 116 學年度統測考生設計的倒數計時與學習助手，提供精確倒數、每日勵志金句及 AI 讀書計畫建議。",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
