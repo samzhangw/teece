@@ -1,5 +1,7 @@
 {
-  "name": "115學年度統測倒數",
-  "description": "四技二專統一入學測驗重要日程倒數計時與行程表",
-  "requestFramePermissions": []
+  "name": "116 統測倒數神器",
+  "description": "專為 116 學年度統測考生設計的倒數計時與學習助手，提供精確倒數、每日勵志金句及 AI 讀書計畫建議。",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
 }

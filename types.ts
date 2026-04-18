@@ -1,25 +1,53 @@
-export interface ScheduleItem {
-  id: string;
-  category: string;
-  title: string;
-  startDate: string; // ISO 8601 format
-  endDate?: string;  // ISO 8601 format
-  description?: string;
-  isExamDay?: boolean; // Flag for the main event
-}
 
 export interface TimeLeft {
   days: number;
   hours: number;
   minutes: number;
   seconds: number;
-  isPast: boolean;
+}
+
+export interface Quote {
+  text: string;
+  author: string;
+}
+
+export interface ExamInfo {
+  date: string;
+  title: string;
+  description: string;
+}
+
+export interface ScheduleItem {
+  event: string;
+  date: string;
+  isoDate?: string; // 用於倒數計時的 ISO 日期字串
+  isConfirmed?: boolean;
+  category?: 'exam' | 'admission' | 'result';
 }
 
 export interface ExamSession {
-  id: string;
+  prepTime: string;
+  examTime: string;
+  subject: string;
+  categoryCodes: string;
+  sessionTitle: string;
+}
+
+export interface ExamDay {
+  date: string;
+  dayOfWeek: string;
+  sessions: ExamSession[];
+}
+
+export interface NoticeItem {
   title: string;
-  startTime: string; // ISO 8601 for the specific exam time
-  endTime: string;   // ISO 8601 for the specific exam time
-  day: 1 | 2;
+  items: string[];
+  warning?: string;
+}
+
+// Added StudyPlanItem interface to resolve the import error in SubjectCard.tsx
+export interface StudyPlanItem {
+  subject: string;
+  goal: string;
+  advice: string;
 }

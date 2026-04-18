@@ -1,213 +1,158 @@
-import { ScheduleItem, ExamSession } from './types';
 
-// ROC Year 114 = 2025
-// ROC Year 115 = 2026
+import { ExamInfo, ScheduleItem, ExamDay, NoticeItem } from './types';
 
-export const SCHEDULE_DATA: ScheduleItem[] = [
-  // Mock Exams
-  {
-    id: 'mock-1',
-    category: '模擬考',
-    title: '第一次模擬考',
-    startDate: '2025-10-02T00:00:00',
-    endDate: '2025-10-03T23:59:59',
+export const EXAM_DATE = "2027-04-24T08:00:00+08:00"; 
+export const EXAM_END_DATE = "2027-04-25T17:40:00+08:00"; // 統測最後一節結束時間
+
+export const EXAM_INFO: ExamInfo = {
+  date: "2027年4月24日 (六) - 4月25日 (日)",
+  title: "116 學年度四技二專統一入學測驗",
+  description: "統測倒數，為夢想而戰！"
+};
+
+export const STATIONERY_GUIDE: NoticeItem = {
+  title: "應試文具清單",
+  items: [
+    "黑色 2B 軟心鉛筆",
+    "黑色墨水的筆",
+    "橡皮擦、修正液(帶)",
+    "圓規、直尺、三角板、量角器",
+    "透明墊板、文具盒(袋)"
+  ],
+  warning: "提醒：文具不可有考試相關文字或符號(如公式、函數圖形)，建議攜帶透明墊板與文具盒。"
+};
+
+export const PROHIBITED_ITEMS: NoticeItem = {
+  title: "不可攜帶入座物品",
+  items: [
+    "計算機、計算紙、文宣品",
+    "耳機類、多媒體播放器 (如 MP3, MP4)",
+    "通訊、拍照、錄影裝置 (手機、穿戴式裝置)",
+    "具 GPS、錄音、傳輸功能之電子設備",
+    "教科書、參考書、電子辭典"
+  ],
+  warning: "考生如需佩戴助聽器，應事先持證明文件申請並配合檢查。"
+};
+
+export const EXAM_PRECAUTIONS: string[] = [
+  "注意身體健康，考前避免出入公共場所，維持正常作息。",
+  "當天務必備妥准考證與文具，提早出門評估考場交通時間。",
+  "因應傳染疾病，考生可自主佩戴口罩應試。",
+  "詳細規範請參閱 116 統測簡章及測驗中心網站公告。"
+];
+
+export const SCHEDULE_ITEMS: ScheduleItem[] = [
+  { 
+    event: "簡章公告與發售", 
+    date: "2026年11月上旬", 
+    isoDate: "2026-11-01T00:00:00+08:00",
+    isConfirmed: false,
+    category: 'admission'
   },
-  {
-    id: 'mock-2',
-    category: '模擬考',
-    title: '第二次模擬考',
-    startDate: '2025-11-10T00:00:00',
-    endDate: '2025-11-11T23:59:59',
+  { 
+    event: "統測報名開始", 
+    date: "2026年12月上旬", 
+    isoDate: "2026-12-10T00:00:00+08:00",
+    isConfirmed: false,
+    category: 'exam'
   },
-  {
-    id: 'pay-school',
-    category: '報名費繳費',
-    title: '學校集體報名繳費',
-    startDate: '2025-11-27T00:00:00',
-    endDate: '2025-12-17T23:59:59',
+  { 
+    event: "准考證開放查詢與下載", 
+    date: "2027年4月中旬", 
+    isoDate: "2027-04-15T00:00:00+08:00",
+    isConfirmed: false,
+    category: 'exam'
   },
-  {
-    id: 'pay-individual',
-    category: '報名費繳費',
-    title: '個別網路報名繳費',
-    startDate: '2025-12-05T00:00:00',
-    endDate: '2025-12-17T23:59:59',
+  { 
+    event: "116 統一入學測驗考試", 
+    date: "2027年4月24日 - 4月25日", 
+    isoDate: "2027-04-24T00:00:00+08:00",
+    isConfirmed: true,
+    category: 'exam'
   },
-  {
-    id: 'registration',
-    category: '報名',
-    title: '報名 (集體/個別)',
-    startDate: '2025-12-05T09:00:00',
-    endDate: '2025-12-17T17:00:00',
+  { 
+    event: "統測成績公佈", 
+    date: "2027年5月中旬", 
+    isoDate: "2027-05-20T00:00:00+08:00",
+    isConfirmed: false,
+    category: 'result'
   },
-  {
-    id: 'mock-3',
-    category: '模擬考',
-    title: '第三次模擬考',
-    startDate: '2025-12-23T00:00:00',
-    endDate: '2025-12-24T23:59:59',
+  { 
+    event: "甄選入學第一階段報名", 
+    date: "2027年5月下旬", 
+    isoDate: "2027-05-25T00:00:00+08:00",
+    isConfirmed: false,
+    category: 'admission'
   },
-  {
-    id: 'check-status',
-    category: '報名結果',
-    title: '報名結果網路查詢及確認',
-    startDate: '2026-01-02T12:00:00',
-    endDate: '2026-01-09T23:59:59',
-  },
-  {
-    id: 'correction',
-    category: '報名結果',
-    title: '報名資料錯誤更正截止',
-    startDate: '2026-01-09T23:59:59', // Assuming end of day if only date provided
-  },
-  {
-    id: 'disability-notice',
-    category: '寄發通知',
-    title: '寄發身心障礙及重大傷病考生應考服務審查結果通知書',
-    startDate: '2026-02-03T23:59:59', // "Before" this date
-  },
-  {
-    id: 'mock-4',
-    category: '模擬考',
-    title: '第四次模擬考',
-    startDate: '2026-03-03T00:00:00',
-    endDate: '2026-03-04T23:59:59',
-  },
-  {
-    id: 'admit-card',
-    category: '寄發通知',
-    title: '寄發准考證',
-    startDate: '2026-03-18T00:00:00',
-  },
-  {
-    id: 'mock-5',
-    category: '模擬考',
-    title: '第五次模擬考',
-    startDate: '2026-03-30T00:00:00',
-    endDate: '2026-03-31T23:59:59',
-  },
-  {
-    id: 'location',
-    category: '公告',
-    title: '公布考試地點',
-    startDate: '2026-04-15T09:00:00',
-  },
-  {
-    id: 'exam-day',
-    category: '考試',
-    title: '統一入學測驗考試',
-    startDate: '2026-04-25T00:00:00',
-    endDate: '2026-04-26T23:59:59',
-    isExamDay: true,
-  },
-  {
-    id: 'questions',
-    category: '公告',
-    title: '公布試題',
-    startDate: '2026-04-25T00:00:00',
-    endDate: '2026-04-26T23:59:59',
-  },
-  {
-    id: 'answers',
-    category: '公告',
-    title: '公布參考答案',
-    startDate: '2026-04-27T09:00:00',
-  },
-  {
-    id: 'objection',
-    category: '疑義',
-    title: '答案疑義質疑申請截止',
-    startDate: '2026-04-30T17:00:00',
-  },
-  {
-    id: 'objection-reply',
-    category: '疑義',
-    title: '公布疑義說明',
-    startDate: '2026-05-13T17:00:00',
-  },
-  {
-    id: 'score-sent',
-    category: '成績',
-    title: '成績單寄發',
-    startDate: '2026-05-14T00:00:00',
-  },
-  {
-    id: 'score-query',
-    category: '成績',
-    title: '成績查詢',
-    startDate: '2026-05-14T14:00:00',
-  },
-  {
-    id: 'stats-announce',
-    category: '公告',
-    title: '統計資料公告',
-    startDate: '2026-05-14T14:00:00',
-  },
-  {
-    id: 'score-review',
-    category: '成績',
-    title: '申請成績複查',
-    startDate: '2026-05-14T14:00:00',
-    endDate: '2026-05-18T17:00:00',
-  },
-  {
-    id: 'review-result',
-    category: '成績',
-    title: '成績複查結果查詢',
-    startDate: '2026-05-22T17:00:00',
+  { 
+    event: "登記分發志願選填", 
+    date: "2027年7月下旬", 
+    isoDate: "2027-07-20T00:00:00+08:00",
+    isConfirmed: false,
+    category: 'admission'
   },
 ];
 
-export const EXAM_SESSIONS: ExamSession[] = [
-  // Day 1: 2026-04-25
+export const EXAM_TIMETABLE: ExamDay[] = [
   {
-    id: 'd1-1',
-    title: '專業科目(二)',
-    startTime: '2026-04-25T10:20:00',
-    endTime: '2026-04-25T12:00:00',
-    day: 1
+    date: "2027年4月24日",
+    dayOfWeek: "星期六",
+    sessions: [
+      {
+        sessionTitle: "上午第1節",
+        prepTime: "10:15",
+        examTime: "10:20-12:00",
+        subject: "專業科目（二）",
+        categoryCodes: "03、07、12、15、51～53、55～56"
+      },
+      {
+        sessionTitle: "下午第2節",
+        prepTime: "13:25",
+        examTime: "13:30-15:10",
+        subject: "國文",
+        categoryCodes: "01～20、51～56"
+      },
+      {
+        sessionTitle: "下午第3節",
+        prepTime: "15:55",
+        examTime: "16:00-17:40",
+        subject: "英文",
+        categoryCodes: "01～20、51～56"
+      }
+    ]
   },
   {
-    id: 'd1-2',
-    title: '國文',
-    startTime: '2026-04-25T13:30:00',
-    endTime: '2026-04-25T15:10:00',
-    day: 1
-  },
-  {
-    id: 'd1-3',
-    title: '英文',
-    startTime: '2026-04-25T16:00:00',
-    endTime: '2026-04-25T17:40:00',
-    day: 1
-  },
-  // Day 2: 2026-04-26
-  {
-    id: 'd2-1',
-    title: '專業科目(二)',
-    startTime: '2026-04-26T08:30:00',
-    endTime: '2026-04-26T10:10:00',
-    day: 2
-  },
-  {
-    id: 'd2-2',
-    title: '數學',
-    startTime: '2026-04-26T11:00:00',
-    endTime: '2026-04-26T12:20:00',
-    day: 2
-  },
-  {
-    id: 'd2-3',
-    title: '專業科目(一)',
-    startTime: '2026-04-26T13:30:00',
-    endTime: '2026-04-26T15:10:00',
-    day: 2
-  },
-  {
-    id: 'd2-4',
-    title: '專業科目(二)',
-    startTime: '2026-04-26T16:00:00',
-    endTime: '2026-04-26T17:40:00',
-    day: 2
+    date: "2027年4月25日",
+    dayOfWeek: "星期日",
+    sessions: [
+      {
+        sessionTitle: "上午第1節",
+        prepTime: "08:25",
+        examTime: "08:30-10:10",
+        subject: "專業科目（二）",
+        categoryCodes: "01～02、04～06、08～11、13～14、17～20、51～54、56"
+      },
+      {
+        sessionTitle: "上午第2節",
+        prepTime: "10:55",
+        examTime: "11:00-12:20",
+        subject: "數學",
+        categoryCodes: "01～20、51～56"
+      },
+      {
+        sessionTitle: "下午第3節",
+        prepTime: "13:25",
+        examTime: "13:30-15:10",
+        subject: "專業科目（一）",
+        categoryCodes: "01～20、51～56"
+      },
+      {
+        sessionTitle: "下午第4節",
+        prepTime: "15:55",
+        examTime: "16:00-17:40",
+        subject: "專業科目（二）",
+        categoryCodes: "16、54～56"
+      }
+    ]
   }
 ];

@@ -1,147 +1,145 @@
+
 <!DOCTYPE html>
-<html lang="zh-TW">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>115年統測倒數計時器 | 四技二專考試日期與剩餘天數</title>
-    <meta name="description" content="專為115學年度四技二專統測考生設計的倒數計時器。提供精準的考試倒數、激勵語錄與美觀介面，陪伴你衝刺每一天。立即查看統測剩幾天！" />
-    <meta name="keywords" content="115統測, 統測倒數, 115年統測日期, 四技二專, 統測計時器, 升學考試, 倒數天數, 統測日期" />
-    <meta name="author" content="統測倒數小幫手" />
-    <meta name="robots" content="index, follow" />
-    
-    <link rel="canonical" href="https://你的網域.com/" />
+    <!-- SEO 基礎標籤 -->
+    <title>116 統測倒數神器 | 四技二專入學測驗精確計時、考情動態、AI 讀書計畫</title>
+    <meta name="description" content="專為 116 學年度統測考生設計。提供精確到秒的倒數計時、完整的考試節次表、應試文具清單、重要日程提醒，以及最新的 116 統測考情分析。助你金榜題名！">
+    <meta name="keywords" content="116統測, 統測倒數, 116學年度四技二專, 統一入學測驗, 統測日期, 統測文具, 讀書計畫, 116考生, 技職高考, 統測時間表">
+    <meta name="author" content="116 統測倒數神器團隊">
+    <link rel="canonical" href="https://tvet-countdown-116.vercel.app/">
 
-    <meta name="google-site-verification" content="eGI3oOhrVVbqjfKd573-m1X00npd47HbZCyJrsKLzEY" />
+    <!-- Open Graph / Facebook (社群分享) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tvet-countdown-116.vercel.app/">
+    <meta property="og:title" content="116 統測倒數神器 | 應試最佳夥伴">
+    <meta property="og:description" content="精確倒數、重要日程、應試指南。針對 116 統測考生的全方位支援工具，助你發揮最佳實力！">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1513258496099-48168024adb0?q=80&w=1200&h=630&auto=format&fit=crop">
 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="115年統測倒數 | 距離考試還有幾天？" />
-    <meta property="og:description" content="把握時間，金榜題名！精美的115年統測倒數計時器，陪你一起努力。" />
-    <meta property="og:url" content="https://你的網域.com/" />
-    <meta property="og:image" content="https://teece.vercel.app/og-image.jpg" /> 
-    <meta property="og:locale" content="zh_TW" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="116 統測倒數神器">
+    <meta name="twitter:description" content="離 116 統測還有多久？這裡有最精確的計時與最完整的考情攻略。">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1513258496099-48168024adb0?q=80&w=1200&h=630&auto=format&fit=crop">
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="115年統測倒數計時器" />
-    <meta name="twitter:description" content="距離115年四技二專統測還有多久？立即查看！" />
-    <meta name="twitter:image" content="https://你的網域.com/og-image.jpg" />
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    
+    <!-- 結構化資料 (JSON-LD) - 告訴 Google 這是個重要的教育活動 -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "115年統測倒數計時器",
-      "url": "https://teece.vercel.app/",
-      "description": "提供115學年度四技二專統一入學測驗的即時倒數功能。",
-      "applicationCategory": "EducationalApplication",
-      "operatingSystem": "All",
+      "@type": "Event",
+      "name": "116 學年度四技二專統一入學測驗",
+      "description": "台灣 116 學年度高職畢業生升學四技二專之重要統一考試。",
+      "startDate": "2027-04-24T08:00",
+      "endDate": "2027-04-25T17:40",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "全台各考區考場",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Taiwan",
+          "addressRegion": "TW"
+        }
+      },
+      "image": [
+        "https://images.unsplash.com/photo-1513258496099-48168024adb0?q=80&w=1200&auto=format&fit=crop"
+      ],
       "offers": {
         "@type": "Offer",
+        "url": "https://www.tcte.edu.tw/",
         "price": "0",
-        "priceCurrency": "TWD"
+        "priceCurrency": "TWD",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2026-12-01"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "技專校院入學測驗中心",
+        "url": "https://www.tcte.edu.tw/"
       }
     }
     </script>
 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
     <style>
-      body {
-        font-family: 'Noto Sans TC', sans-serif;
-        background-color: #f1f5f9;
-        background-image: 
-          radial-gradient(at 0% 0%, rgba(199, 210, 254, 0.3) 0px, transparent 50%),
-          radial-gradient(at 100% 0%, rgba(221, 214, 254, 0.3) 0px, transparent 50%),
-          radial-gradient(at 100% 100%, rgba(204, 251, 241, 0.3) 0px, transparent 50%);
-        background-attachment: fixed;
-        color: #1e293b;
-        overflow-x: hidden;
-      }
-      
-      /* Animated Background */
-      .blob {
-        position: absolute;
-        filter: blur(90px);
-        z-index: -1;
-        opacity: 0.5;
-        animation: float 25s infinite ease-in-out alternate;
-      }
-      
-      @keyframes float {
-        0% { transform: translate(0, 0) scale(1) rotate(0deg); }
-        50% { transform: translate(30px, 20px) scale(1.1) rotate(10deg); }
-        100% { transform: translate(-20px, 40px) scale(0.9) rotate(-10deg); }
-      }
-
-      /* Premium Glass Effect */
-      .glass-panel {
-        background: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.8);
-        box-shadow: 
-          0 4px 6px -1px rgba(0, 0, 0, 0.05), 
-          0 2px 4px -1px rgba(0, 0, 0, 0.03),
-          inset 0 0 0 1px rgba(255, 255, 255, 0.5);
-      }
-      
-      /* Interactive Glass Card */
-      .glass-card {
-        background: rgba(255, 255, 255, 0.65);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border: 1px solid rgba(255, 255, 255, 0.6);
-        box-shadow: 
-          0 10px 15px -3px rgba(0, 0, 0, 0.05), 
-          0 4px 6px -2px rgba(0, 0, 0, 0.025),
-          inset 0 1px 0 0 rgba(255, 255, 255, 0.7);
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      }
-      
-      .glass-card:hover {
-        background: rgba(255, 255, 255, 0.85);
-        transform: translateY(-4px) scale(1.02);
-        border-color: rgba(99, 102, 241, 0.3);
-        box-shadow: 
-          0 20px 25px -5px rgba(99, 102, 241, 0.1), 
-          0 10px 10px -5px rgba(99, 102, 241, 0.05),
-          0 0 0 1px rgba(99, 102, 241, 0.1);
-      }
-
-      .font-mono-nums {
-        font-family: 'JetBrains Mono', monospace;
-        font-variant-numeric: tabular-nums;
-      }
-
-      /* Shimmer Effect */
-      .shimmer {
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
-        background-size: 200% 100%;
-        animation: shimmer 2s infinite linear;
-      }
-
-      @keyframes shimmer {
-        0% { background-position: -200% 0; }
-        100% { background-position: 200% 0; }
-      }
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.75);
+            --glass-border: rgba(255, 255, 255, 0.5);
+        }
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f8fafc;
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(225, 39%, 95%, 1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(265, 33%, 94%, 1) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, hsla(225, 39%, 95%, 1) 0, transparent 50%);
+            min-height: 100vh;
+            color: #1e293b;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e2e8f0;
+            border-radius: 10px;
+        }
     </style>
-  </head>
-  <body>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="selection:bg-indigo-100 selection:text-indigo-700">
     <div id="root"></div>
-    <script type="module" src="/src/index.tsx"></script>
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9X7EC127P"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-H9X7EC127P');
-    </script>
-  </body>
+<script type="module" src="/index.tsx"></script>
+</body>
 </html>
