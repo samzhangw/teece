@@ -90,7 +90,7 @@ const App: React.FC = () => {
                Year 116 · Countdown
             </div>
             <h1 className="text-7xl md:text-9xl font-black text-slate-900 tracking-tighter leading-none mb-2">
-              116 統測倒數
+              統測倒數
             </h1>
             <p className="text-slate-500 font-bold tracking-widest uppercase text-xs">四技二專統一入學測驗計時器</p>
           </div>
